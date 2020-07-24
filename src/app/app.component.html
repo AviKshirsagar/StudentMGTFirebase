@@ -1,0 +1,64 @@
+<!-- Top navigation -->
+<nav class="navbar navbar-dark fixed-top bg-success flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" routerLink="/register-student">
+    <img class="brand-logo logo" src="https://image.flaticon.com/icons/svg/3182/3182551.svg" alt="AvirshaLogo">
+    <span class="dasboard-text">Student Management</span>
+  </a>
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" routerLink="/register-student">
+        <span class="user-image" style="background-image: url('assets/avinash.png')"></span>
+        Hello Avinash
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Sidebar navigation -->
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+
+          <!-- routerLink="/register-student" to navigate to view-students component -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/register-student" routerLinkActive="active">
+              <i class="fas fa-plus"></i>Add Student
+            </a>
+          </li>
+
+          <!-- routerLink="/view-students" to navigate to view-students component -->
+          <!-- routerLinkActive="active" activates active class for component-->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/view-students" routerLinkActive="active">
+              <i class="fas fa-list-ul"></i>Students List
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="inner-adjust">
+
+        <!-- Use router template to show the components for which router service is activated -->
+        <router-outlet></router-outlet>
+
+        <!-- Footer -->
+        <footer>
+          Application created by
+          <a href="https://in.linkedin.com/in/avinash-kshirsagar-97575a171?trk=people-guest_people_search-card" title="Angular Firebase">
+            Avinash Kshisagar
+          </a>
+          <a href="https://avikshirsagar.github.io/MyPortfolio/" title="Angular Firebase Project for student entries">
+            My Portfolio
+          </a>
+          <p>&copy; right 2020</p>
+        </footer>
+      </div>
+    </main>
+
+  </div>
+</div>
