@@ -1,4 +1,11 @@
-.logo{
+.logo {
     height: 50px;
     width: 50px;
+}
+
+.Sidebar {
+    background-color: white;
+    transition: 0.5s;
+    padding-top: 10px;
+    box-shadow: 0 0 12px rgba(46, 160, 1, 0.5);
 }
