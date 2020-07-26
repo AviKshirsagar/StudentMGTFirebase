@@ -15,7 +15,8 @@
           <input type="text" formControlName="firstName" class="form-control" required>
           <!-- Showing errors using getter method -->
           <p *ngIf="firstName.touched && firstName.invalid" class="error"><sup>*</sup>Please enter atleast first name</p>
-          <p *ngIf="firstName.errors?.minlength" class="error"><sup>*</sup>Name shouldn't be less than 2 words</p>
+          <p *ngIf="firstName.errors?.minlength" class="error"><sup>*</sup>Name shouldn't be less than 4 words</p>
+          <p *ngIf="firstName.errors?.pattern" class="error"><sup>*</sup>Name shouldn't be Special char's or Number's</p>
         </div>
 
         <div class="col-md-12 mb-3">
@@ -36,12 +37,14 @@
 
         <div class="col-md-12 mb-3">
           <label>Mobile number</label>
-          <input type="text" formControlName="mobileNumber" class="form-control" required>
+          <input type="text" formControlName="mobileNumber" maxlength="10" class="form-control" required>
           <!-- Showing errors using getter method -->
           <p *ngIf="mobileNumber.touched && mobileNumber.invalid" class="error"><sup>*</sup>Please provide contact
             number</p>
           <p *ngIf="mobileNumber.errors?.pattern" class="error"><sup>*</sup>Use numbers only
             number</p>
+            <p *ngIf="mobileNumber.errors?.minlength" class="error"><sup>*</sup>Use 10 digits only
+              number</p>
         </div>
 
       </div>

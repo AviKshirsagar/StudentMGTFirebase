@@ -28,10 +28,10 @@ export class AddStudentComponent implements OnInit {
   // Reactive student form
   studenForm() {
     this.studentForm = this.fb.group({
-      firstName: ['', [Validators.required, Validators.minLength(2)]],
+      firstName: ['', [Validators.required, Validators.minLength(4), Validators.pattern('[a-zA-Z ]*$')]],
       lastName: [''],
       email: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')]],
-      mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]]
+      mobileNumber: ['', [Validators.required, Validators.minLength(10), Validators.pattern('^[0-9]+$')]]
     })  
   }
 
